@@ -18,6 +18,7 @@ Type something, click a button, and listen to your **ego** get reassured or turn
 
 # 🔥 How It Works - The AWS Architecture  
 Here’s a breakdown of **everything we've built**, step by step.  
+![image](https://github.com/user-attachments/assets/1662c1dc-8a6c-4a9f-9146-ce8f68f5421d)
 
 ## 1️⃣ User Interaction - The Frontend (AWS Amplify)  
 - **Users enter text** into a **modern, neon cyberpunk** UI.  
