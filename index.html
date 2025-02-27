@@ -17,9 +17,10 @@
     </header>
 
     <main>
+        <!-- 📝 "Need inspiration" is now properly on a separate line -->
         <div id="sample-prompts">
             <p>Need inspiration for some affirmations? Click a "suggestion":</p>
-            <div class="prompt-container">
+            <div id="prompt-buttons">
                 <button class="prompt-btn" onclick="useSample('Did you really think that would work?')">Tell me how great I am.</button>
                 <button class="prompt-btn" onclick="useSample('I never vote because that is EXACTLY what the government wants me to do. Wake up sheeple!!!')">I make excellent life choices.</button>
                 <button class="prompt-btn" onclick="useSample('I can always guess how many jellybeans are in a jellybean jar. Even if that number is not right.')">Nobody understands my genius.</button>
@@ -27,11 +28,13 @@
             </div>
         </div>
 
-        <div id="text-area-container">
+        <!-- ✍️ Bigger text input box -->
+        <div id="text-input-container">
             <textarea id="text-input" placeholder="Tell me what I already know..."></textarea>
-            <button id="clear-text-btn" onclick="clearText()">✖</button>
+            <button id="clear-text-btn" onclick="clearText()">❌</button>
         </div>
-        
+
+        <!-- 🎤 Voice selection -->
         <div id="voice-selection">
             <label for="voice">Choose a Voice:</label>
             <select id="voice">
@@ -46,7 +49,7 @@
                 <option value="Aditi">Aditi (Indian English Female)</option>
             </select>
         </div>
-        
+
         <div class="buttons">
             <button id="convert-btn">Make It Speak</button>
             <label class="switch">
@@ -56,18 +59,18 @@
             <span class="toggle-label">Echo Chamber Mode</span>
         </div>
 
-        <div id="loading-message" style="display: none;">Processing your request...</div>
-
+        <!-- 🎵 Enlarged Audio Output -->
         <div id="audio-output-section">
             <h2>Audio Output</h2>
             <audio id="audio-player" controls></audio>
         </div>
 
-        <div id="architecture-section">
+        <!-- 🔗 Link to GitHub instead of Architecture Image -->
+        <section class="info-section">
             <h2>How This Works</h2>
-            <p>Want to see the magic behind the machine? Check out the <a href="https://github.com/YOUR_GITHUB_USERNAME/marcoverse-tts" target="_blank">GitHub repository</a> for details on the AWS architecture.</p>
-            <img src="aws-architecture-diagram.png" alt="AWS Architecture" class="architecture-img">
-        </div>
+            <p>Want to see the magic behind the machine? Check out the <a href="https://github.com/YOUR_GITHUB_REPO" target="_blank">GitHub repository</a> for details on the AWS architecture.</p>
+        </section>
+
     </main>
 
     <footer>
