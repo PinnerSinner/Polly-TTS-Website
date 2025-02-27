@@ -1,4 +1,4 @@
-/* Cyberpunk Neon Theme */
+/* 🔥 CYBERPUNK STYLE VIBES */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap');
 
 body {
@@ -10,19 +10,18 @@ body {
     padding: 0;
 }
 
-/* Header */
+/* 🔥 HEADER STYLING */
 header {
     padding: 20px;
 }
 
 .logo {
-    max-width: 120px;
+    max-width: 150px;
     display: block;
     margin: 0 auto 10px;
     filter: drop-shadow(0px 0px 10px rgba(255, 100, 50, 0.9));
 }
 
-/* Title Gradient Effect */
 .gradient-text {
     font-size: 2.5em;
     font-weight: bold;
@@ -32,44 +31,43 @@ header {
     text-shadow: 0px 0px 10px cyan;
 }
 
-/* Adjust Paragraphs */
 p {
     font-size: 1.2em;
     opacity: 0.8;
 }
 
-/* Prompt Section */
+/* 🔥 SAMPLE PROMPTS - NOW PROPERLY SEPARATED */
 #sample-prompts {
-    text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Ensures "Need inspiration" is on a separate line */
+    align-items: center;
 }
 
-/* Ensure text appears above the buttons */
 #sample-prompts p {
-    margin-bottom: 10px;
-    display: block;
+    margin-bottom: 10px; /* Creates spacing between text and buttons */
 }
 
-#prompt-buttons {
+.prompt-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
 }
 
 .prompt-btn {
     background: linear-gradient(90deg, #ff007f, #ff9100);
     border: none;
-    color: white;
+    color: black;
     font-family: 'VT323', monospace;
     font-size: 1.3em;
-    padding: 10px 20px;
+    padding: 12px 20px;
+    margin: 5px;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
     font-weight: bold;
     box-shadow: 0px 0px 12px rgba(255, 0, 255, 0.8);
-    white-space: nowrap;
 }
 
 .prompt-btn:hover {
@@ -78,49 +76,62 @@ p {
     transform: scale(1.05);
 }
 
-/* Main Layout Adjustments */
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-/* Text Area Styling - Bigger Size */
+/* 🔥 TEXT INPUT - NOW BIGGER AND MORE SPACIOUS */
 textarea {
-    width: 75%;
-    height: 180px; /* Increased height significantly */
+    width: 80%;
+    height: 150px; /* ✅ Increased height */
     padding: 12px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     background: black;
     border: 2px solid cyan;
     color: #0ff;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     resize: none;
-    box-shadow: 0px 0px 10px cyan;
+    box-shadow: 0px 0px 12px cyan;
 }
 
-/* Clear Text Button */
+/* 🔥 "CLEAR TEXT" BUTTON FIX - NOW NEXT TO TEXT BOX */
+.text-area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
 #clear-text-btn {
-    background-color: red;
-    color: white;
-    padding: 10px 15px;
+    background: red;
     border: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
-    font-weight: bold;
+    transition: 0.3s;
     box-shadow: 0px 0px 10px red;
-    margin-left: 10px;
 }
 
 #clear-text-btn:hover {
-    background-color: darkred;
+    background: darkred;
     box-shadow: 0px 0px 15px red;
 }
 
-/* Voice Selection */
+/* 🔥 AUDIO PLAYER - NOW BIGGER AND NOT TINY */
+#audio-output-section {
+    margin-top: 30px;
+    display: none;
+    text-align: center;
+}
+
+audio {
+    width: 70%;
+    max-width: 600px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px cyan;
+}
+
+/* 🔥 CENTER "CHOOSE VOICE" */
 #voice-selection {
     margin-top: 10px;
     text-align: center;
@@ -137,25 +148,25 @@ textarea {
     box-shadow: 0px 0px 10px cyan;
 }
 
-/* Buttons */
+/* 🔥 MAIN BUTTONS */
 .buttons {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-top: 10px;
+    justify-content: center;
 }
 
 button {
     background-color: cyan;
     color: black;
     padding: 12px 20px;
-    font-size: 1em;
+    font-size: 1.1em;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
     font-weight: bold;
-    box-shadow: 0px 0px 10px cyan;
+    box-shadow: 0px 0px 12px cyan;
 }
 
 button:hover {
@@ -163,7 +174,7 @@ button:hover {
     box-shadow: 0px 0px 20px cyan;
 }
 
-/* Echo Chamber Toggle */
+/* 🔥 TOGGLE SWITCH */
 .switch {
     position: relative;
     display: inline-block;
@@ -210,36 +221,16 @@ input:checked + .slider:before {
 }
 
 .toggle-label {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #0ff;
 }
 
-/* Audio Player Section */
-#audio-output-section {
-    margin-top: 20px;
-    text-align: center;
-    display: none;
-}
-
-audio {
-    width: 80%;
-    max-width: 600px;
-    margin-top: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px cyan;
-}
-
-/* Remove AWS Architecture Image */
-.architecture-section {
-    display: none;
-}
-
-/* Footer */
+/* 🔥 FOOTER */
 footer {
     margin-top: 30px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.5);
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 footer a {
@@ -255,5 +246,10 @@ footer a:hover {
 .funny-text {
     color: magenta;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.3em;
+}
+
+/* 🔥 FIXED SPACING FOR "HOW THIS WORKS" */
+.how-it-works {
+    margin-top: 40px;
 }
