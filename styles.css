@@ -45,14 +45,15 @@ p {
 .prompt-btn {
     background: linear-gradient(90deg, #ff007f, #ff9100);
     border: none;
-    color: white;
+    color: black;  /* Changed from white to black for contrast */
     font-family: 'VT323', monospace;
-    font-size: 1.2em;
-    padding: 8px 15px;
+    font-size: 1.3em;
+    padding: 10px 18px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: bold;
     box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.7);
 }
 
@@ -60,6 +61,7 @@ p {
     background: linear-gradient(90deg, #ff9100, #ff007f);
     box-shadow: 0px 0px 20px rgba(255, 0, 255, 1);
 }
+
 
 /* Main Content */
 main {
