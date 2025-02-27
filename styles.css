@@ -195,3 +195,18 @@ footer a:hover {
     font-weight: bold;
     font-size: 1.2em;
 }
+
+#voice-selection {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#voice {
+    background: black;
+    color: cyan;
+    font-size: 1.2em;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
