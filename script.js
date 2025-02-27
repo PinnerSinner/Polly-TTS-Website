@@ -10,26 +10,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const API_URL = "https://j43phkl462.execute-api.us-east-1.amazonaws.com/dev/convert";
 
-    // Function to set text from sample prompts
+    // ✅ Function to set text from sample prompts
     window.useSample = (text) => {
         textInput.value = text;
         textInput.focus();
         updateButtonState();
     };
 
-    // Function to clear text area
+    // ✅ Function to clear text area
     window.clearText = () => {
         textInput.value = "";
         updateButtonState();
     };
 
-    // Function to enable/disable the button based on input
+    // ✅ Function to enable/disable the "Make It Speak" button based on input
     const updateButtonState = () => {
         convertButton.disabled = textInput.value.trim() === "";
     };
 
     textInput.addEventListener("input", updateButtonState);
 
+    // ✅ Main function to send text to Lambda and retrieve audio
     convertButton.addEventListener("click", async () => {
         const text = textInput.value.trim();
         const selectedVoice = voiceSelect.value;
@@ -41,9 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log("🔵 Sending request to Lambda with text & voice:", text, selectedVoice);
         
-        loadingMessage.style.display = "block";
-        convertButton.disabled = true;
-        
+        convertButton.disabled = true; // Prevent spam clicking
+        convertButton.textContent = "Loading...";
+
         try {
             const response = await fetch(API_URL, {
                 method: "POST",
@@ -63,11 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
             if (data.fileUrl) {
                 audioPlayer.src = data.fileUrl;
                 audioOutputSection.style.display = "block";
-                audioPlayer.controls = true;
-                audioPlayer.style.width = "100%";
-                audioPlayer.style.maxWidth = "600px";
-                audioPlayer.style.height = "50px";
-                audioPlayer.style.marginTop = "10px";
                 audioPlayer.play();
 
                 if (echoToggle.checked) {
@@ -82,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("🔴 Error calling Lambda:", error);
             alert("Oops! Something went wrong. Check console for details.");
         } finally {
-            loadingMessage.style.display = "none";
             convertButton.disabled = false;
+            convertButton.textContent = "Make It Speak";
         }
     });
 
