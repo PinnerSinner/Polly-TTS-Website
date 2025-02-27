@@ -1,5 +1,3 @@
-// script.js
-
 document.getElementById('convert-btn').addEventListener('click', async () => {
     const textInput = document.getElementById('text-input').value;
     if (!textInput) {
@@ -21,13 +19,22 @@ document.getElementById('convert-btn').addEventListener('click', async () => {
         }
 
         const data = await response.json();
-        const audioUrl = data.audioUrl; // Ensure your Lambda function returns this URL
+        console.log("API Response:", data); // Debugging line
 
+        // Use the correct key for the audio file URL
+        const audioUrl = data.fileUrl; 
+        console.log("Audio URL:", audioUrl);
+
+        if (!audioUrl) {
+            alert("No audio file received.");
+            return;
+        }
+
+        // Set the correct audio file URL and play it
         const audioPlayer = document.getElementById('audio-player');
         audioPlayer.src = audioUrl;
-
-        const audioOutputSection = document.getElementById('audio-output-section');
-        audioOutputSection.style.display = 'block';
+        audioPlayer.style.display = 'block'; 
+        audioPlayer.play();
     } catch (error) {
         console.error('Error:', error);
         alert('There was an error processing your request.');
