@@ -1,5 +1,5 @@
 /* Cyberpunk Neon Vibes */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap');
 
 body {
     font-family: 'Orbitron', sans-serif;
@@ -22,15 +22,43 @@ header {
     filter: drop-shadow(0px 0px 10px rgba(255, 100, 50, 0.9));
 }
 
-h1 {
-    font-size: 2em;
-    margin: 10px 0;
+/* Gradient Text for Titles */
+.gradient-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    background: linear-gradient(90deg, cyan, magenta, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-shadow: 0px 0px 10px cyan;
 }
 
 p {
     font-size: 1.2em;
     opacity: 0.8;
+}
+
+/* Sample Prompts */
+#sample-prompts {
+    margin-bottom: 10px;
+}
+
+.prompt-btn {
+    background: linear-gradient(90deg, #ff007f, #ff9100);
+    border: none;
+    color: white;
+    font-family: 'VT323', monospace;
+    font-size: 1.2em;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.7);
+}
+
+.prompt-btn:hover {
+    background: linear-gradient(90deg, #ff9100, #ff007f);
+    box-shadow: 0px 0px 20px rgba(255, 0, 255, 1);
 }
 
 /* Main Content */
@@ -147,6 +175,7 @@ footer {
     margin-top: 30px;
     padding: 10px;
     background: rgba(0, 0, 0, 0.5);
+    font-size: 1.1em;
 }
 
 footer a {
@@ -157,4 +186,10 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+.funny-text {
+    color: magenta;
+    font-weight: bold;
+    font-size: 1.2em;
 }

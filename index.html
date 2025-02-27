@@ -3,20 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcoverse TTS - Echo Chamber</title>
+    <title>Text-to-ChitChat</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <img src="FINAL LOGO.png" alt="Marcoverse Logo" class="logo">
-        <h1>Marcoverse TTS - The Ego Amplifier</h1>
+        <h1 class="gradient-text">Marcoverse TTS - The Ego Amplifier</h1>
         <p>
-            Type something. Anything. Let the machine **validate your existence**.  
+            Type something. Anything. Let the machine <strong>validate your existence</strong>.  
             <br>Or use <strong>Echo Chamber Mode</strong> for endless self-affirmation.
         </p>
     </header>
 
     <main>
+        <div id="sample-prompts">
+            <p>Need inspiration for some affirmations? Click a "suggestion":</p>
+            <button class="prompt-btn" onclick="useSample('Did you really think that would work?')">Tell me how great I am.</button>
+            <button class="prompt-btn" onclick="useSample('I never vote because that is EXACTLY what the government wants me to do. Wake up sheeple!!!')">I make excellent life choices.</button>
+            <button class="prompt-btn" onclick="useSample('I can always guess how many jellybeans are in a jellybean jar. Even if that number is not right.')">Nobody understands my genius.</button>
+            <button class="prompt-btn" onclick="useSample('All you gotta do is react with the most garden-variety level of cynicisms imaginable and anyone who even slightly agrees with you will come running towards you. Oh and this also works on communists')">This is the best website ever.</button>
+        </div>
+
         <textarea id="text-input" placeholder="Tell me what I already know..."></textarea>
         
         <div class="buttons">
@@ -36,7 +44,7 @@
 
     <footer>
         <p>Created by <a href="https://marcoverse.co.uk" target="_blank">Marcoverse</a>.  
-        <br>**Powered by my AWS vaccine microchip 💉**</p>
+        <br><span class="funny-text">Powered by my AWS vaccine microchip 💉</span></p>
     </footer>
 
     <script src="script.js"></script>
