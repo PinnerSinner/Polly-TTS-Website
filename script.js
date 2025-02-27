@@ -1,7 +1,15 @@
-document.getElementById('convert-btn').addEventListener('click', async () => {
-    const textInput = document.getElementById('text-input').value;
-    if (!textInput) {
-        alert('Please enter some text.');
+const convertButton = document.getElementById('convert-btn');
+const echoToggle = document.getElementById('echo-toggle');
+const textInput = document.getElementById('text-input');
+const audioOutputSection = document.getElementById('audio-output-section');
+const audioPlayer = document.getElementById('audio-player');
+
+let echoMode = false;
+
+convertButton.addEventListener('click', async () => {
+    const text = textInput.value;
+    if (!text) {
+        alert("Come on, give me something to say!");
         return;
     }
 
@@ -11,32 +19,28 @@ document.getElementById('convert-btn').addEventListener('click', async () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ text: textInput }),
+            body: JSON.stringify({ text }),
         });
 
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+        if (!response.ok) throw new Error("Bad response from server.");
 
         const data = await response.json();
-        console.log("API Response:", data); // Debugging line
+        if (!data.fileUrl) throw new Error("No audio file received.");
 
-        // Use the correct key for the audio file URL
-        const audioUrl = data.fileUrl; 
-        console.log("Audio URL:", audioUrl);
+        audioPlayer.src = data.fileUrl;
+        audioOutputSection.style.display = 'block';
 
-        if (!audioUrl) {
-            alert("No audio file received.");
-            return;
+        if (echoToggle.checked) {
+            echoMode = true;
+            audioPlayer.loop = true;
+        } else {
+            echoMode = false;
+            audioPlayer.loop = false;
         }
 
-        // Set the correct audio file URL and play it
-        const audioPlayer = document.getElementById('audio-player');
-        audioPlayer.src = audioUrl;
-        audioPlayer.style.display = 'block'; 
         audioPlayer.play();
     } catch (error) {
-        console.error('Error:', error);
-        alert('There was an error processing your request.');
+        console.error("Error:", error);
+        alert("I tried. The machine gods have denied us.");
     }
 });

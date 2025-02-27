@@ -3,26 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcoverse Text-to-Speech</title>
+    <title>Marcoverse TTS - Echo Chamber</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Marcoverse Text-to-Speech Converter</h1>
+        <img src="FINAL LOGO.png" alt="Marcoverse Logo" class="logo">
+        <h1>Marcoverse TTS - The Ego Amplifier</h1>
+        <p>
+            Type something. Anything. Let the machine **validate your existence**.  
+            <br>Or use <strong>Echo Chamber Mode</strong> for endless self-affirmation.
+        </p>
     </header>
+
     <main>
-        <section class="description">
-            <p>Welcome to the Marcoverse Text-to-Speech service. Enter your text below, and we'll convert it to speech for you.</p>
-        </section>
-        <section class="converter">
-            <textarea id="text-input" placeholder="Type your text here..."></textarea>
-            <button id="convert-btn">Convert to Speech</button>
-        </section>
-        <section class="audio-output" id="audio-output-section" style="display: none;">
+        <textarea id="text-input" placeholder="Tell me what I already know..."></textarea>
+        
+        <div class="buttons">
+            <button id="convert-btn">Make It Speak</button>
+            <label class="switch">
+                <input type="checkbox" id="echo-toggle">
+                <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Echo Chamber Mode</span>
+        </div>
+
+        <div id="audio-output-section">
             <h2>Audio Output</h2>
             <audio id="audio-player" controls></audio>
-        </section>
+        </div>
     </main>
+
+    <footer>
+        <p>Created by <a href="https://marcoverse.co.uk" target="_blank">Marcoverse</a>.  
+        <br>**Powered by my AWS vaccine microchip 💉**</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
