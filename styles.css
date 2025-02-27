@@ -40,11 +40,21 @@ p {
 
 /* Prompt Section */
 #sample-prompts {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Ensure text appears above the buttons */
+#sample-prompts p {
+    margin-bottom: 10px;
+    display: block;
+}
+
+#prompt-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    margin-bottom: 15px;
 }
 
 .prompt-btn {
@@ -76,14 +86,14 @@ main {
     padding: 20px;
 }
 
-/* Text Area Styling */
+/* Text Area Styling - Bigger Size */
 textarea {
-    width: 60%;
-    height: 120px;
-    padding: 10px;
+    width: 75%;
+    height: 180px; /* Increased height significantly */
+    padding: 12px;
     font-size: 1.2em;
     background: black;
-    border: 1px solid cyan;
+    border: 2px solid cyan;
     color: #0ff;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -219,17 +229,9 @@ audio {
     box-shadow: 0px 0px 15px cyan;
 }
 
-/* Architecture Diagram */
+/* Remove AWS Architecture Image */
 .architecture-section {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.architecture-section img {
-    max-width: 80%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px cyan;
-    margin-top: 15px;
+    display: none;
 }
 
 /* Footer */
@@ -255,4 +257,3 @@ footer a:hover {
     font-weight: bold;
     font-size: 1.2em;
 }
-
