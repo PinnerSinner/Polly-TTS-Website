@@ -7,6 +7,18 @@ const echoToggle = document.getElementById('echo-toggle');
 
 const API_URL = "https://j43phkl462.execute-api.us-east-1.amazonaws.com/dev/convert"; // Update with your API Gateway URL
 
+// ✅ Fix: Add missing function to apply sample text
+function useSample(sampleText) {
+    textInput.value = sampleText;
+}
+
+// ✅ Fix: Ensure all suggestion buttons trigger useSample()
+document.querySelectorAll('.prompt-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        useSample(this.getAttribute("data-text"));
+    });
+});
+
 convertButton.addEventListener('click', async () => {
     const text = textInput.value.trim();
     const selectedVoice = voiceSelect.value; // Get the selected voice

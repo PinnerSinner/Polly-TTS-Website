@@ -1,6 +1,7 @@
-/* Cyberpunk Neon Vibes */
+/* Import Cyberpunk Font */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap');
 
+/* General Styles */
 body {
     font-family: 'Orbitron', sans-serif;
     background: radial-gradient(circle, #121212, #000000);
@@ -34,36 +35,43 @@ header {
 
 p {
     font-size: 1.2em;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
-/* Sample Prompts */
+/* ─── Sample Prompt Buttons ─── */
 #sample-prompts {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .prompt-btn {
     background: linear-gradient(90deg, #ff007f, #ff9100);
     border: none;
-    color: black;  /* Changed from white to black for contrast */
+    color: white; /* ✅ Improved contrast */
     font-family: 'VT323', monospace;
     font-size: 1.3em;
-    padding: 10px 18px;
+    padding: 12px 20px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
     font-weight: bold;
-    box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.7);
+    box-shadow: 0px 0px 12px rgba(255, 0, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .prompt-btn:hover {
     background: linear-gradient(90deg, #ff9100, #ff007f);
     box-shadow: 0px 0px 20px rgba(255, 0, 255, 1);
+    transform: scale(1.05);
 }
 
-
-/* Main Content */
+/* ─── Main Content ─── */
 main {
     display: flex;
     flex-direction: column;
@@ -77,7 +85,7 @@ textarea {
     padding: 10px;
     font-size: 1em;
     background: black;
-    border: 1px solid cyan;
+    border: 2px solid cyan;
     color: #0ff;
     border-radius: 5px;
     margin-bottom: 15px;
@@ -85,7 +93,24 @@ textarea {
     box-shadow: 0px 0px 10px cyan;
 }
 
-/* Buttons */
+/* ─── Center the "Choose Voice" Section ─── */
+#voice-selection {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#voice {
+    background: black;
+    color: cyan;
+    font-size: 1.3em;
+    border: 2px solid cyan;
+    border-radius: 5px;
+    padding: 7px 12px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px cyan;
+}
+
+/* ─── Buttons ─── */
 .buttons {
     display: flex;
     align-items: center;
@@ -110,7 +135,7 @@ button:hover {
     box-shadow: 0px 0px 20px cyan;
 }
 
-/* Toggle Switch */
+/* ─── Toggle Switch ─── */
 .switch {
     position: relative;
     display: inline-block;
@@ -161,18 +186,22 @@ input:checked + .slider:before {
     color: #0ff;
 }
 
-/* Audio Output */
+/* ─── Make the Audio Player Larger ─── */
 #audio-output-section {
-    margin-top: 20px;
+    margin-top: 30px;
     display: none;
+    text-align: center;
 }
 
 audio {
-    margin-top: 10px;
-    width: 80%;
+    width: 70%; /* ✅ Enlarged */
+    max-width: 600px;
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px cyan;
 }
 
-/* Footer */
+/* ─── Footer ─── */
 footer {
     margin-top: 30px;
     padding: 10px;
@@ -194,19 +223,4 @@ footer a:hover {
     color: magenta;
     font-weight: bold;
     font-size: 1.2em;
-}
-
-#voice-selection {
-    margin-top: 10px;
-    text-align: center;
-}
-
-#voice {
-    background: black;
-    color: cyan;
-    font-size: 1.2em;
-    border: 2px solid cyan;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
 }
