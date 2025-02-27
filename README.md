@@ -1,10 +1,11 @@
-# 🚀 Text-to-Chitchat  
-*"Let the machine validate your existence by talking back to you!"*  
+# 🗣️ Text-to-Chitchat  
+*Let the machine validate your existence by talking back to you!*  
 
 A snazzy themed text-to-speech web app powered by **AWS Polly**, **AWS Lambda**, and **AWS Amplify**.  
 Type something, click a button, and listen to your **ego** get reassured or turn on **Echo Chamber Mode** for **infinite validation**.  
 ![image](https://github.com/user-attachments/assets/174fa6fc-bef7-40b9-a80d-fdcbc1c1d7bb)
 
+Link to chitchat! > https://main.d110yree0ten2x.amplifyapp.com
 ---
 
 ## 🎯 Project Summary
