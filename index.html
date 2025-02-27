@@ -19,15 +19,17 @@
     <main>
         <div id="sample-prompts">
             <p>Need inspiration for some affirmations? Click a "suggestion":</p>
-            <button class="prompt-btn" onclick="useSample('Did you really think that would work?')">Tell me how great I am.</button>
-            <button class="prompt-btn" onclick="useSample('I never vote because that is EXACTLY what the government wants me to do. Wake up sheeple!!!')">I make excellent life choices.</button>
-            <button class="prompt-btn" onclick="useSample('I can always guess how many jellybeans are in a jellybean jar. Even if that number is not right.')">Nobody understands my genius.</button>
-            <button class="prompt-btn" onclick="useSample('Well, at least I have a keen eye for design')">This is the best website ever.</button>
+            <div class="prompt-container">
+                <button class="prompt-btn" onclick="useSample('Did you really think that would work?')">Tell me how great I am.</button>
+                <button class="prompt-btn" onclick="useSample('I never vote because that is EXACTLY what the government wants me to do. Wake up sheeple!!!')">I make excellent life choices.</button>
+                <button class="prompt-btn" onclick="useSample('I can always guess how many jellybeans are in a jellybean jar. Even if that number is not right.')">Nobody understands my genius.</button>
+                <button class="prompt-btn" onclick="useSample('Well, at least I have a keen eye for design')">This is the best website ever.</button>
+            </div>
         </div>
 
         <div id="text-area-container">
             <textarea id="text-input" placeholder="Tell me what I already know..."></textarea>
-            <button id="clear-text-btn" onclick="clearText()">✖ Clear Text</button>
+            <button id="clear-text-btn" onclick="clearText()">✖</button>
         </div>
         
         <div id="voice-selection">
@@ -59,6 +61,12 @@
         <div id="audio-output-section">
             <h2>Audio Output</h2>
             <audio id="audio-player" controls></audio>
+        </div>
+
+        <div id="architecture-section">
+            <h2>How This Works</h2>
+            <p>Want to see the magic behind the machine? Check out the <a href="https://github.com/YOUR_GITHUB_USERNAME/marcoverse-tts" target="_blank">GitHub repository</a> for details on the AWS architecture.</p>
+            <img src="aws-architecture-diagram.png" alt="AWS Architecture" class="architecture-img">
         </div>
     </main>
 
